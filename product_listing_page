@@ -1,0 +1,27 @@
+const plants = [
+  { id: 1, name: 'Snake Plant', price: 20, imageUrl: 'snake-plant.jpg' },
+  { id: 2, name: 'Spider Plant', price: 15, imageUrl: 'spider-plant.jpg' },
+  // Add 4 more plants
+];
+
+return (
+  <div className="product-listing">
+    {plants.map(plant => (
+      <div key={plant.id} className="plant-card">
+        <img src={plant.imageUrl} alt={plant.name} />
+        <h3>{plant.name}</h3>
+        <p>${plant.price}</p>
+        <button onClick={() => addToCart(plant)}>Add to Cart</button>
+      </div>
+    ))}
+  </div>
+);
+const categories = {
+  indoor: [...],
+  outdoor: [...],
+  succulents: [...],
+};
+const addToCart = (plant) => {
+  dispatch(addToCartAction(plant)); // Redux action
+  // Update UI logic (disabling button and cart count)
+};
