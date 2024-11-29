@@ -1,0 +1,3 @@
+<p>Welcome to PlantStore! We offer a wide variety of houseplants to make your home green and beautiful.</p>
+<h1>PlantStore</h1>
+<button onClick={() => history.push('/products')}>Get Started</button>
