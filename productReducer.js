@@ -14,3 +14,9 @@ function cartReducer(state = initialState, action) {
   }
 }
 export default cartReducer;
+// cartActions.js
+export const addToCart = (product) => ({
+  type: 'ADD_TO_CART',
+  payload: product,
+});
+
