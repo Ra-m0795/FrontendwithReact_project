@@ -1,0 +1,15 @@
+const totalPlants = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+const totalCost = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+<button>Checkout (Coming Soon)</button>
+<button onClick={() => history.push('/products')}>Continue Shopping</button>
+cartItems.map((item) => (
+  <div key={item.id}>
+    <img src={item.imageUrl} alt={item.name} />
+    <p>{item.name}</p>
+    <p>${item.price}</p>
+    <p>Quantity: {item.quantity}</p>
+  </div>
+));
+const handleDelete = (id) => {
+  dispatch(deleteItemFromCart(id)); // Redux action
+};
